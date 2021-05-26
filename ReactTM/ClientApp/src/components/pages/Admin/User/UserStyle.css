@@ -1,0 +1,19 @@
+﻿.card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom:20px;
+}
+
+.card-item-title {
+    width:100px;
+}
+
+.card-item-inputbox {
+    width:100%;
+}

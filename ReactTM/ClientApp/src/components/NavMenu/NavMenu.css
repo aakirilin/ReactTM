@@ -1,0 +1,46 @@
+﻿
+
+.navMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0 15px 0;
+    background-color: #333333;
+    color: white;
+    position: relative;
+}
+
+.dropMenu {
+    cursor:pointer;
+}
+
+.dropMenu:hover .dropMenuTop {
+    display: flex;
+}
+
+.dropMenuTop {
+    display: none;
+    position: absolute;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+    color: black;
+    width: max-content;
+    margin: 0;
+    flex-direction:column;
+}
+
+.dropMenu li {
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dropMenu li:hover {
+    background-color: #808080;
+}
+
+.navigate{
+    display:flex;
+    flex-direction:row;
+}

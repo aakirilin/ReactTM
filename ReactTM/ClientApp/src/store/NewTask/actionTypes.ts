@@ -1,0 +1,6 @@
+﻿const PAGE_NAME = 'NEW_TASK';
+
+export const SET_DETHLINE = PAGE_NAME + '_SET_DETHLINE';
+export const SET_TITLE = PAGE_NAME + '_SET_TITLE';
+export const SET_DESCRIPTION = PAGE_NAME + '_SET_DESCRIPTION';
+export const DROP_EXECUTORS = PAGE_NAME + '_DROP_EXECUTORS';
