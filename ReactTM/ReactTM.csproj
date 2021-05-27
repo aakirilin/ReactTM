@@ -49,6 +49,10 @@
     <None Remove="ClientApp\src\pages\Admin\User\index.tsx" />
     <None Remove="ClientApp\src\pages\Admin\Users\index.tsx" />
     <None Remove="ClientApp\src\pages\NewTask\index.tsx" />
+    <None Remove="ClientApp\src\store\Admin\User\actionTypes.ts" />
+    <None Remove="ClientApp\src\store\Admin\User\reducer.ts" />
+    <None Remove="ClientApp\src\store\Admin\User\selectors.ts" />
+    <None Remove="ClientApp\src\store\Admin\User\types.ts" />
     <None Remove="ClientApp\src\store\apiFunction.ts" />
     <None Remove="ClientApp\src\store\models.ts" />
     <None Remove="ClientApp\src\store\NewTask\actionTypes.ts" />
@@ -100,6 +104,18 @@
     <TypeScriptCompile Include="ClientApp\src\pages\NewTask\index.tsx" />
     <TypeScriptCompile Include="ClientApp\src\api\apiFunction.ts" />
     <TypeScriptCompile Include="ClientApp\src\models.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\Admin\User\actionTypes.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\store\Admin\User\reducer.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\store\Admin\User\selectors.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\store\Admin\User\types.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\store\NewTask\reducer.ts" />
     <TypeScriptCompile Include="ClientApp\src\store\NewTask\selectors.ts" />
     <TypeScriptCompile Include="ClientApp\src\store\NewTask\types.ts">

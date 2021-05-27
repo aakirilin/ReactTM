@@ -23,6 +23,16 @@ export interface User {
     role: string
 }
 
+export function NewUser(): User {
+    return {
+        id: '00000000-0000-0000-0000-000000000000',
+        name: '',
+        login: '',
+        password: '',
+        role: ''
+    }
+}
+
 export interface Note {
     autorId: String,
     title: String,

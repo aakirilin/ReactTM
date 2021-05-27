@@ -6,12 +6,13 @@ import api from '../../../api/adminApi';
 import State from '../../../store/oauth';
 import { User } from '../../../models';
 
+
 const Users: React.FC = () => {
     const [users, serUsers] = useState(new Array<User>());
     const [wasLoad, setWasLoad] = useState(false);
 
     if (!wasLoad) {
-        api.getAllUsers(0, 10)
+        api.user.getAll(0, 10)
             .then(u => {
                 setWasLoad(true);
                 serUsers(u.items);
@@ -22,7 +23,7 @@ const Users: React.FC = () => {
     return (
         <Fragment>
             awdawdawd
-            <Link to='/admin/user'>Новый</Link>
+            <Link to='/admin/user/new'>Новый</Link>
             <UsersComponent users={users} />
         </Fragment>
     );

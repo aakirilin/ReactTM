@@ -23,7 +23,7 @@ namespace ReactTM.Models
         public async Task<Guid> Add(UserEntity user)
         {
             context.Users.Add(user);
-            await context.Users.SingleAsync();
+            await context.SaveChangesAsync();
             return user.Id;
         }
 

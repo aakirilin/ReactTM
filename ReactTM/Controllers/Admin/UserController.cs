@@ -19,16 +19,18 @@ namespace ReactTM.Controllers.Admin
         {
         }
 
-        private async Task<object> GetDescription(int skip, int take)
+        private async Task<object> GetUser(Guid userId)
         {
-            var result = await userStorege.PaginationSelect(skip, take);
+            var result = await userStorege.FindAsync(userId);
             return result;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get(int skip, int take)
+        public async Task<IActionResult> Get(
+            [RegularExpression(@"[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}")]
+            string userId)
         {
-            return await TryCatchAsync(GetDescription(skip, take), 500);
+            return await TryCatchAsync(GetUser(Guid.Parse(userId)), 500);
         }
 
         private async Task<object> Insert(UserEntity user)

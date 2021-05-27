@@ -38,53 +38,67 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var apiFunction_1 = require("./apiFunction");
 var userControllerUrl = 'admin/User';
+var usersControllerUrl = 'admin/Users';
 var apiFinctions = {
-    getAllUsers: function (skip, take) { return __awaiter(void 0, void 0, void 0, function () {
-        var result;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, apiFunction_1.axiosApiInstance.get(userControllerUrl + "?skip=" + skip + "&take=" + take)];
-                case 1:
-                    result = _a.sent();
-                    return [2 /*return*/, result.data];
-            }
-        });
-    }); },
-    deleteUser: function (userId) { return __awaiter(void 0, void 0, void 0, function () {
-        var uri, result;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    uri = userControllerUrl + "?userId=" + userId;
-                    return [4 /*yield*/, apiFunction_1.axiosApiInstance.delete(uri)];
-                case 1:
-                    result = _a.sent();
-                    return [2 /*return*/, result.data];
-            }
-        });
-    }); },
-    addUser: function (user) { return __awaiter(void 0, void 0, void 0, function () {
-        var result;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, apiFunction_1.axiosApiInstance.post(userControllerUrl, user)];
-                case 1:
-                    result = _a.sent();
-                    return [2 /*return*/, result.data];
-            }
-        });
-    }); },
-    updateUser: function (user) { return __awaiter(void 0, void 0, void 0, function () {
-        var result;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, apiFunction_1.axiosApiInstance.put(userControllerUrl, user)];
-                case 1:
-                    result = _a.sent();
-                    return [2 /*return*/, result.data];
-            }
-        });
-    }); }
+    user: {
+        get: function (userId) { return __awaiter(void 0, void 0, void 0, function () {
+            var result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, apiFunction_1.axiosApiInstance.get(userControllerUrl + "?userId=" + userId)];
+                    case 1:
+                        result = _a.sent();
+                        return [2 /*return*/, result.data];
+                }
+            });
+        }); },
+        delete: function (userId) { return __awaiter(void 0, void 0, void 0, function () {
+            var uri, result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        uri = userControllerUrl + "?userId=" + userId;
+                        return [4 /*yield*/, apiFunction_1.axiosApiInstance.delete(uri)];
+                    case 1:
+                        result = _a.sent();
+                        return [2 /*return*/, result.data];
+                }
+            });
+        }); },
+        add: function (user) { return __awaiter(void 0, void 0, void 0, function () {
+            var result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, apiFunction_1.axiosApiInstance.post(userControllerUrl, user)];
+                    case 1:
+                        result = _a.sent();
+                        return [2 /*return*/, result.data];
+                }
+            });
+        }); },
+        update: function (user) { return __awaiter(void 0, void 0, void 0, function () {
+            var result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, apiFunction_1.axiosApiInstance.put(userControllerUrl, user)];
+                    case 1:
+                        result = _a.sent();
+                        return [2 /*return*/, result.data];
+                }
+            });
+        }); },
+        getAll: function (skip, take) { return __awaiter(void 0, void 0, void 0, function () {
+            var result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, apiFunction_1.axiosApiInstance.get(usersControllerUrl + "?skip=" + skip + "&take=" + take)];
+                    case 1:
+                        result = _a.sent();
+                        return [2 /*return*/, result.data];
+                }
+            });
+        }); },
+    }
 };
 exports.default = apiFinctions;
 //# sourceMappingURL=adminApi.js.map
